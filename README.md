@@ -6,34 +6,21 @@ This repository contains a custom ASCII banner for use with Spring Boot applicat
 
 Place the `banner.txt` file in the `src/main/resources` directory of your Spring Boot project. It will automatically be displayed in the console on application startup.
 
-## Features
+## Configuration
 
-- Dynamic placeholders for application and system properties
-- ANSI color codes for enhanced readability
-- Clean and professional layout
+To display application-specific values like name and version, you need to define the following properties in your configuration files:
 
-## Example placeholders used
+### `application.yml`
 
-\`\`\`
-\${AnsiColor.BRIGHT_GREEN}Application:         \${AnsiColor.WHITE}\${app.name}
-\${AnsiColor.BRIGHT_GREEN}Version:             \${AnsiColor.WHITE}\${app.version}
-\${AnsiColor.BRIGHT_GREEN}Spring Boot:         \${AnsiColor.WHITE}\${spring-boot.version}
-\${AnsiColor.BRIGHT_GREEN}Java:                \${AnsiColor.WHITE}\${java.version}
-\${AnsiColor.BRIGHT_YELLOW}User:                \${AnsiColor.WHITE}\${user.name}
-\${AnsiColor.BRIGHT_YELLOW}Dir:                 \${AnsiColor.WHITE}\${user.dir}
-\${AnsiColor.BRIGHT_YELLOW}Encoding:            \${AnsiColor.WHITE}\${file.encoding}
-\${AnsiColor.BRIGHT_YELLOW}Time Zone:           \${AnsiColor.WHITE}\${user.timezone}
-\${AnsiColor.BRIGHT_YELLOW}OS:                  \${AnsiColor.WHITE}\${os.name} \${os.version} (\${os.arch})
-\${AnsiColor.DEFAULT}
-\`\`\`
+```yaml
+app:
+  name: your-app-name
+  version: 1.0.0
+```
 
-## Banner preview
+### `application.properties`
 
-\`\`\`
-________              _____                    ________            _____     _______
-__  ___/_________________(_)_____________ _    ___  __ )_____________  /_    ___    |_______________
-_____ \___  __ \_  ___/_  /__  __ \_  __ \`/    __  __  |  __ \  __ \  __/    __  /| |__  __ \__  __ \
-____/ /__  /_/ /  /   _  / _  / / /  /_/ /     _  /_/ // /_/ / /_/ / /_      _  ___ |_  /_/ /_  /_/ /
-/____/ _  .___//_/    /_/  /_/ /_/_\__, /      /_____/ \____/\____/\__/      /_/  |_|  .___/_  .___/
-       /_/                        /____/                                            /_/     /_/
-\`\`\`
+```properties
+app.name=your-app-name
+app.version=1.0.0
+```
