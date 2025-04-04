@@ -13,14 +13,15 @@ To display application-specific values like name and version, you need to define
 ### `application.yml`
 
 ```yaml
-app:
-  name: your-app-name
-  version: 1.0.0
+spring:
+  app:
+    name: your-app-name
+    version: 1.0.0
 ```
 
 ### `application.properties`
 
 ```properties
-app.name=your-app-name
-app.version=1.0.0
+spring.app.name=your-app-name
+spring.app.version=1.0.0
 ```
